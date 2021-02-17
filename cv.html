@@ -94,8 +94,7 @@
                     employer="Mérce"
                     employerLink="https://merce.hu"
                     category="Media"
-                >
-                    <div slot="description">
+                    description = "
                         <p>
                             Mérce is and independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself.
                         </p>
@@ -105,7 +104,8 @@
                             <li>Backend: <strong>PHP / Composer / WordPress, MySQL, Nginx, FastCGI Cache</strong></li>
                             <li>Operations: <strong>Linux, AWS S3 & CloudFlare</strong>, Provisioned & Deployed with <strong>Ansible</strong></li>
                         </ul>
-                    </div>
+                    "
+                >
                 </job-item>
             </section>
         </main>
@@ -122,7 +122,7 @@
                         position: { type: String },
                         employer: { type: String },
                         employerLink: { type: String },
-                        description: { tpye: String }
+                        description: { type: String },
                     }
                 }
 
@@ -131,9 +131,9 @@
                     console.log(this);
                 }
                 
-                /*createRenderRoot() {
+                createRenderRoot() {
                     return this;
-                }*/
+                }
 
                 render() {
                     return html`
@@ -148,7 +148,7 @@
                                 <span class="employer">${this._employer()}</span>
                                 <span class="category">${this.category}</span>
                             <div class="description">
-                            <slot name="description"></slot>
+                                ${this._description()}
                             </div>
                         </article>
                     `;
@@ -164,6 +164,11 @@
                         content += `</a>`;
                     }
                     let fragment = document.createRange().createContextualFragment(content);
+                    return html`${fragment}`;
+                }
+                
+                _description() {
+                    let fragment = document.createRange().createContextualFragment(this.description);
                     return html`${fragment}`;
                 }
                 
