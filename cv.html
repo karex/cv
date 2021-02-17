@@ -96,7 +96,7 @@
                     category="Media"
                     description = "
                         <p>
-                            Mérce is and independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself.
+                            Mérce is an independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself.
                         </p>
                         <ul>
                             <li>Everything-as-code principle on <strong>Roots.io</strong> stack: Trellis, Bedrock, Sage</li>
@@ -122,13 +122,13 @@
                         position: { type: String },
                         employer: { type: String },
                         employerLink: { type: String },
+                        category: { type: String },
                         description: { type: String },
                     }
                 }
 
                 constructor() {
                     super();
-                    console.log(this);
                 }
                 
                 createRenderRoot() {
@@ -145,8 +145,10 @@
                             <h1 class="position">
                                 ${this.position}
                             </h1>
+                            <div>
                                 <span class="employer">${this._employer()}</span>
-                                <span class="category">${this.category}</span>
+                                <span class="category">(${this.category})</span>
+                            </div>
                             <div class="description">
                                 ${this._description()}
                             </div>
@@ -156,12 +158,9 @@
                 
                 _employer() {
                     let content = '';
-                    if (typeof this.employerLink != 'undefined') {
-                        content += `<a href="${this.employerLink}">`;
-                    }
                     content += this.employer;
                     if (this.employerLink != '') {
-                        content += `</a>`;
+                        content += ` – <a href="${this.employerLink}">${this.employerLink}</a>`;
                     }
                     let fragment = document.createRange().createContextualFragment(content);
                     return html`${fragment}`;
