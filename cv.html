@@ -74,6 +74,27 @@
             img.profile-picture {
                 width: 150px;
             }
+            
+            .two-col {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+            
+            dl {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-style: normal;
+                margin: 0 0 1em;
+            }
+            
+            dt {
+                text-transform: lowercase;
+                font-variant: small-caps;
+            }
+            
+            dd {
+                margin: 0;
+            }
         </style>
     </head>
     <body>
@@ -88,23 +109,30 @@
             </section>
         </header>
         <main>
-            <section>
+            <section class="two-col">
                 <address>
                     <dl>
                         <dt>Email</dt>
                         <dd>
                             <script>document.write(pii.email);</script>
                         </dd>
+                    </dl>
+                    <dl>
                         <dt>Address</dt>
                         <dd>
                             <script>document.write(pii.address);</script>
                         </dd>
+                    </dl>
+                    <dl>
                         <dt>Telephone</dt>
                         <dd>
                             <script>document.write(pii.telephone);</script>
                         </dd>
                     </dl>
                 </address>
+                <nav>
+                    
+                </nav>
             </section>
         </main>
     </body>
