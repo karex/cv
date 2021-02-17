@@ -6,6 +6,7 @@
 
 :root {
     --dark: #333;
+    --lessdark: #999;
     --light: #eee;
     --background: #fff;
 }
@@ -118,4 +119,23 @@ section > h1 {
 
 .job {
     margin: 0 0 1em;
+}
+
+.job .duration {
+    color: var(--lessdark);
+    font-style: italic;
+}
+
+.job .duration::before {
+    content: " – ";
+    color: var(--lessdark);
+}
+
+.job .position {
+    margin: 0.2em 0;
+    font-size: 26px;
+}
+
+.job .category {
+    color: var(--lessdark);
 }
