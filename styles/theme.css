@@ -14,7 +14,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--dark);
-    font-size: 18px;
+    font-size: 17px;
     margin: 0;
 }
 
@@ -118,7 +118,7 @@ section > h1 {
 }
 
 .job {
-    margin: 0 0 1em;
+    margin: 0 0 2em;
 }
 
 .job .duration {
@@ -133,7 +133,7 @@ section > h1 {
 
 .job .position {
     margin: 0.2em 0;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .job .category {
