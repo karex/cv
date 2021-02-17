@@ -1,0 +1,22 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "A Frontend Developer's CV by karex",
+  "main": "index.html",
+  "scripts": {
+    "convert": "node convert.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karex/cv.git"
+  },
+  "author": "karex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karex/cv/issues"
+  },
+  "homepage": "https://github.com/karex/cv#readme",
+  "dependencies": {
+    "html-pdf": "^2.2.0"
+  }
+}
