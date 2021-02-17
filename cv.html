@@ -13,16 +13,21 @@
                 margin: 0;
             }
             
+            :root {
+                --dark: #333;
+                --light: #eee;
+            }
+            
             body {
                 font-family: Arial, Helvetica, sans-serif;
-                color: #333;
+                color: var(--dark);
                 font-size: 18px;
                 margin: 0;
             }
             
             hr {
                 border: none;
-                border-bottom: 3px solid #333;
+                border-bottom: 3px solid var(--dark);
             }
             
             header,
@@ -33,7 +38,7 @@
             }
             
             header {
-                background-color: #eee;
+                background-color: var(--light);
                 display: flex;
                 justify-content: space-between;
                 padding-top: 3em;
