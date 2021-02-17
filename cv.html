@@ -42,6 +42,10 @@
                 width: auto;
             }
             
+            main section:nth-child(n+2) {
+                background: var(--light);
+            }
+            
             header {
                 background-color: var(--light);
                 display: flex;
@@ -49,17 +53,17 @@
                 padding-top: 3em;
             }
             
-            header section {
+            header div {
                 padding-left: 1em;
                 padding-right: 1em;
             }
             
-            header section:first-child {
+            header div:first-child {
                 padding-left: 0;
                 flex-grow: 1;
             }
             
-            header section:last-child {
+            header div:last-child {
                 padding-right: 0;
             }
             
@@ -92,6 +96,10 @@
                 margin: 0 0 1em;
             }
             
+            dl:last-child {
+                margin: 0;
+            }
+            
             dt {
                 text-transform: lowercase;
                 font-variant: small-caps;
@@ -103,26 +111,35 @@
             }
             
             dt svg {
-                width: 34px;
-                height: 34px;
+                width: 35px;
+                height: 35px;
             }
             
             dd {
                 margin: 0;
                 align-self: center;
             }
+            
+            section > h1 {
+                text-transform: uppercase;
+                margin-top: 0;
+            }
+            
+            .job {
+                margin: 0 0 1em;
+            }
         </style>
     </head>
     <body>
         <header>
-            <section>
+            <div>
                 <h1>Károly Füzessi</h1>
                 <hr>
                 <h2>Full Stack Web Developer with 10+ years of experience</h2>
-            </section>
-            <section>
+            </div>
+            <div>
                 <img class="profile-picture" src="images/profile-picture.jpg">
-            </section>
+            </div>
         </header>
         <main>
             <section class="two-col">
@@ -189,6 +206,31 @@
                         </dd>
                     </dl>
                 </nav>
+            </section>
+            <section>
+                <h1>Work Experience</h1>
+                <article class="job">
+                    <div>
+                        <time class="dates">2021-01 &larr; 2016-07</time>
+                        <time class="duration">4 yrs 7 mos</time>
+                    </div>
+                    <h1 class="position">
+                        Head of Technology & Lead Developer
+                        <span class="employer"><a href="https://merce.hu">Mérce</a></span>
+                        <span class="category">(Media)</span>
+                    </h1>
+                    <div class="description">
+                        <p>
+                            Mérce is and independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself.
+                        </p>
+                        <ul>
+                            <li>Everything-as-code principle on <strong>Roots.io</strong> stack: Trellis, Bedrock, Sage</li>
+                            <li>Frontend: <strong>HTML, CSS / Sass, JavaScript / jQuery, Node.js, gulp, D3 / C3</strong></li>
+                            <li>Backend: <strong>PHP / Composer / WordPress, MySQL, Nginx, FastCGI Cache</strong></li>
+                            <li>Operations: <strong>Linux, AWS S3 & CloudFlare</strong>, Provisioned & Deployed with <strong>Ansible</strong></li>
+                        </ul>
+                    </div>
+                </article>
             </section>
         </main>
     </body>
