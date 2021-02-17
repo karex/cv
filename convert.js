@@ -30,4 +30,4 @@ while (freeFileName === false) {
     }
 }
 
-renderPDF.generateSinglePdf(currentPath + htmlFile, pdfFile, { chromeBinary: chromeBinary, noMargins: true});
+renderPDF.generateSinglePdf(currentPath + htmlFile, pdfFile, { chromeBinary: chromeBinary, noMargins: true, includeBackground: true});
