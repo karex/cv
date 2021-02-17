@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Full Stack Developer with 10+ years of experience</title>
+        <title>Full Stack Web Developer with 10+ years of experience</title>
         <script>
             var pii = {};
         </script>
@@ -87,17 +87,15 @@
             </section>
             <section>
                 <h1>Work Experience</h1>
-                <article class="job">
-                    <div>
-                        <time class="dates">2021-01 &larr; 2016-07</time>
-                        <time class="duration">4 yrs 7 mos</time>
-                    </div>
-                    <h1 class="position">
-                        Head of Technology & Lead Developer
-                        <span class="employer"><a href="https://merce.hu">Mérce</a></span>
-                        <span class="category">(Media)</span>
-                    </h1>
-                    <div class="description">
+                <job-item
+                    dateFrom="2016-07"
+                    dateTo="2021-01"
+                    position="Head of Technology & Lead Developer"
+                    employer="Mérce"
+                    employerLink="https://merce.hu"
+                    category="Media"
+                >
+                    <div slot="description">
                         <p>
                             Mérce is and independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself.
                         </p>
@@ -108,8 +106,93 @@
                             <li>Operations: <strong>Linux, AWS S3 & CloudFlare</strong>, Provisioned & Deployed with <strong>Ansible</strong></li>
                         </ul>
                     </div>
-                </article>
+                </job-item>
             </section>
         </main>
+        
+        <script type="module">
+            import {LitElement, html, css} from 'https://unpkg.com/lit-element/lit-element.js?module';
+
+            class JobItem extends LitElement {
+
+                static get properties() {
+                    return {
+                        dateFrom: { type: String },
+                        dateTo: { type: String },
+                        position: { type: String },
+                        employer: { type: String },
+                        employerLink: { type: String },
+                        description: { tpye: String }
+                    }
+                }
+
+                constructor() {
+                    super();
+                    console.log(this);
+                }
+                
+                /*createRenderRoot() {
+                    return this;
+                }*/
+
+                render() {
+                    return html`
+                        <article class="job">
+                            <div>
+                                <time class="dates">${this.dateFrom} &rarr; ${this.dateTo}</time>
+                                <time class="duration">${this._duration()}</slot></time>
+                            </div>
+                            <h1 class="position">
+                                ${this.position}
+                            </h1>
+                                <span class="employer">${this._employer()}</span>
+                                <span class="category">${this.category}</span>
+                            <div class="description">
+                            <slot name="description"></slot>
+                            </div>
+                        </article>
+                    `;
+                }
+                
+                _employer() {
+                    let content = '';
+                    if (typeof this.employerLink != 'undefined') {
+                        content += `<a href="${this.employerLink}">`;
+                    }
+                    content += this.employer;
+                    if (this.employerLink != '') {
+                        content += `</a>`;
+                    }
+                    let fragment = document.createRange().createContextualFragment(content);
+                    return html`${fragment}`;
+                }
+                
+                _duration() {
+                    let d1 = new Date(this.dateFrom);
+                    let d2 = new Date(this.dateTo);
+                    
+                    let diff = (d2.getFullYear() - d1.getFullYear()) * 12 + 1;
+                    diff -= d1.getMonth();
+                    diff += d2.getMonth();
+                    
+                    let years = Math.floor(diff / 12);
+                    let months = diff % 12;
+                    let yearStr = 'yr';
+                    if (years > 1) {
+                        yearStr = 'yrs';
+                    }
+                    let monthStr = 'mo';
+                    if (months > 1) {
+                        monthStr = 'mos';
+                    }
+                    
+                    return `${years} ${yearStr} ${months} ${monthStr}`;
+                }
+                
+            }
+
+            customElements.define('job-item', JobItem);
+        </script>
+        
     </body>
 </html>
