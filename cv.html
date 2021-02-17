@@ -23,15 +23,23 @@
                 border-bottom: 3px solid #333;
             }
             
-            section {
+            header,
+            main section,
+            footer {
                 padding: 2em;
             }
             
-            section.hero {
+            header {
                 background-color: #d3d3d3;
             }
             
-            section.hero h1 {
+            header h1 {
+                font-size: 40px;
+                margin-bottom: 0.1em;
+                margin-top: 0;
+            }
+            
+            header h2 {
                 font-size: 28px;
                 margin-bottom: 0.1em;
                 margin-top: 0;
@@ -39,29 +47,30 @@
         </style>
     </head>
     <body>
-        <section class="hero">
-            <header>
-                <h1>Full Stack Web Developer with 10+ years of experience</h1>
+        <header>
+                <h1>Károly Füzessi</h1>
                 <hr>
-            </header>
-        </section>
-        <section>
-            <dl>
-                <dt>Name</dt>
-                <dd>Károly Füzessi</dd>
-                <dt>Email</dt>
-                <dd>
-                    <script>document.write(pii.email);</script>
-                </dd>
-                <dt>Address</dt>
-                <dd>
-                    <script>document.write(pii.address);</script>
-                </dd>
-                <dt>Telephone</dt>
-                <dd>
-                    <script>document.write(pii.telephone);</script>
-                </dd>
-            </dl>
-        </section>
+                <h2>Full Stack Web Developer with 10+ years of experience</h2>
+        </header>
+        <main>
+            <section id="contact">
+                <address>
+                    <dl>
+                        <dt>Email</dt>
+                        <dd>
+                            <script>document.write(pii.email);</script>
+                        </dd>
+                        <dt>Address</dt>
+                        <dd>
+                            <script>document.write(pii.address);</script>
+                        </dd>
+                        <dt>Telephone</dt>
+                        <dd>
+                            <script>document.write(pii.telephone);</script>
+                        </dd>
+                    </dl>
+                </address>
+            </section>
+        </main>
     </body>
 </html>
