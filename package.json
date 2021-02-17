@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/karex/cv#readme",
   "dependencies": {
-    "html-pdf": "^2.2.0"
+    "chrome-headless-render-pdf": "^1.8.5"
   }
 }

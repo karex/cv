@@ -1,15 +1,17 @@
-let fs = require('fs');
-let path = require('path');
-let pdf = require('html-pdf');
+const chromeBinary = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
+const renderPDF = require('chrome-headless-render-pdf');
+const fs = require('fs');
+const path = require('path');
 
-let htmlFileName = './cv';
-let pdfFileName = './cv';
+const currentPath = 'file:///' + path.resolve().replace(/\\/g, '/') + '/';
+
+const htmlFileName = './cv';
+const pdfFileName = './cv';
 const htmlExt = '.html';
 const pdfExt = '.pdf';
 let htmlFile = htmlFileName + htmlExt;
 let pdfFile = pdfFileName + pdfExt;
 
-let html = fs.readFileSync(htmlFile, 'utf8');
 let freeFileName = false;
 let counter = 0;
 
@@ -28,16 +30,4 @@ while (freeFileName === false) {
     }
 }
 
-let currentPath = 'file:///' + path.resolve('.').replace(/\\/g, '/') + '/';
-
-let options = {
-    format: 'A4',
-    base: currentPath
-};
-
-pdf.create(html, options).toFile(pdfFile, function(err, res) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(res);
-});
+renderPDF.generateSinglePdf(currentPath + htmlFile, pdfFile, { chromeBinary: chromeBinary, noMargins: true});
