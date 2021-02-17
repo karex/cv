@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Full Stack Developer with 10+ years of experience</title>
         <script>
             var pii = {};
@@ -9,6 +10,7 @@
             @page {
                 width: 210mm;
                 height: 297mm;
+                margin: 0;
             }
             
             body {
@@ -27,33 +29,61 @@
             main section,
             footer {
                 padding: 2em;
+                width: auto;
             }
             
             header {
-                background-color: #d3d3d3;
+                background-color: #eee;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 3em;
+            }
+            
+            header section {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            
+            header section:first-child {
+                padding-left: 0;
+                flex-grow: 1;
+            }
+            
+            header section:last-child {
+                padding-right: 0;
             }
             
             header h1 {
-                font-size: 40px;
+                font-size: 46px;
                 margin-bottom: 0.1em;
                 margin-top: 0;
             }
             
             header h2 {
-                font-size: 28px;
+                font-size: 34px;
                 margin-bottom: 0.1em;
                 margin-top: 0;
+                max-width: 480px;
+            }
+            
+            img.profile-picture {
+                width: 150px;
             }
         </style>
     </head>
     <body>
         <header>
+            <section>
                 <h1>Károly Füzessi</h1>
                 <hr>
                 <h2>Full Stack Web Developer with 10+ years of experience</h2>
+            </section>
+            <section>
+                <img class="profile-picture" src="images/profile-picture.jpg">
+            </section>
         </header>
         <main>
-            <section id="contact">
+            <section>
                 <address>
                     <dl>
                         <dt>Email</dt>
