@@ -10,6 +10,7 @@
     --light: #eee;
     --background: #fff;
     --theme-color: lightskyblue;
+    --single-width: 3px;
 }
 
 body {
@@ -23,13 +24,13 @@ body {
 @media only screen {
     
     body {
-        margin: 0 2em 2em;
+        margin: 1em 2em;
     }
 }
 
 hr {
     border: none;
-    border-bottom: 6px solid var(--theme-color);
+    border-bottom: var(--single-width) solid var(--theme-color);
 }
 
 a {
@@ -57,7 +58,7 @@ main section {
     padding-top: 1em;
     padding-bottom: 1em;
     width: auto;
-    border-bottom: 3px solid var(--theme-color);
+    border-bottom: var(--single-width) solid var(--theme-color);
 }
 
 main section:last-child {
@@ -67,7 +68,7 @@ main section:last-child {
 header.header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 3px solid var(--theme-color);
+    border-bottom: var(--single-width) solid var(--theme-color);
     padding: 0 0 1em;
 }
 
@@ -117,8 +118,7 @@ dl:last-child {
 }
 
 dt {
-    text-transform: lowercase;
-    font-variant: small-caps;
+    color: var(--lessdark);
     padding-right: 1em;
 }
 
@@ -147,7 +147,7 @@ section > h1 {
 }
 
 .job header {
-    border-left: 6px solid var(--theme-color);
+    border-left: var(--single-width) solid var(--theme-color);
     padding-left: 1em;
 }
 
