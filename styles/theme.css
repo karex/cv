@@ -53,22 +53,22 @@ ul li::marker {
     color: var(--theme-color);
 }
 
-header.header,
-main section,
-footer.footer {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+main section {
+    padding-top: 1em;
+    padding-bottom: 1em;
     width: auto;
+    border-bottom: 3px solid var(--theme-color);
 }
 
-main section {
-    border-bottom: 2px solid var(--theme-color);
+main section:last-child {
+    border-bottom: none;
 }
 
 header.header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid var(--theme-color);
+    border-bottom: 3px solid var(--theme-color);
+    padding: 0 0 1em;
 }
 
 header.header div {
@@ -87,14 +87,12 @@ header div:last-child {
 
 header h1 {
     font-size: 46px;
-    margin-bottom: 0.1em;
-    margin-top: 0;
+    margin: 0;
 }
 
 header h2 {
     font-size: 34px;
-    margin-bottom: 0.1em;
-    margin-top: 0;
+    margin: 0;
     max-width: 480px;
 }
 
@@ -179,4 +177,9 @@ section > h1 {
 
 .job .description {
     margin-left: calc(1em + 6px);
+}
+
+#education h2 {
+    font-size: 20px;
+    margin: 0;
 }
