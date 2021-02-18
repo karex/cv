@@ -216,13 +216,13 @@
 
                 static get properties() {
                     return {
-                        dateFrom: { type: String },
-                        dateTo: { type: String },
-                        position: { type: String },
-                        employer: { type: String },
-                        employerLink: { type: String },
-                        category: { type: String },
-                        description: { type: String },
+                        dateFrom:       { type: String },
+                        dateTo:         { type: String },
+                        position:       { type: String },
+                        employer:       { type: String },
+                        employerLink:   { type: String },
+                        category:       { type: String },
+                        description:    { type: String },
                     }
                 }
 
@@ -241,7 +241,8 @@
                                 <div>
                                     <time class="dates">${this.dateFrom} &rarr; ${this.dateTo}</time>
                                     <time class="duration">${this._duration()}</slot></time>
-                                    –                                <span class="employer">${this._employer()}</span>
+                                    – 
+                                    <span class="employer">${this._employer()}</span>
                                     <span class="category">(${this.category})</span>
                                 </div>
                                 <h1 class="position">
@@ -256,11 +257,11 @@
                 }
                 
                 _employer() {
-                    let content = '';
-                    content += this.employer;
+                    let content = this.employer;
                     if (typeof this.employerLink != 'undefined') {
                         content += ` – <a href="${this.employerLink}">${this.employerLink}</a>`;
                     }
+                    // fragments make it possible to return rendered html
                     let fragment = document.createRange().createContextualFragment(content);
                     return html`${fragment}`;
                 }
@@ -274,22 +275,24 @@
                     let d1 = new Date(this.dateFrom);
                     let d2 = new Date(this.dateTo);
                     
-                    let diff = (d2.getFullYear() - d1.getFullYear()) * 12 + 1;
+                    let diff = (d2.getFullYear() - d1.getFullYear()) * 12;
                     diff -= d1.getMonth();
                     diff += d2.getMonth();
+                    diff++; // count in the last month
                     
                     let years = Math.floor(diff / 12);
                     let months = diff % 12;
-                    let yearStr = 'yr';
                     
                     if (years === 1 && months === 0) {
                         years = 0;
                         months = 12;
                     }
                     
+                    let yearStr = 'yr';
                     if (years > 1) {
                         yearStr = 'yrs';
                     }
+                    
                     let monthStr = 'mo';
                     if (months > 1) {
                         monthStr = 'mos';
