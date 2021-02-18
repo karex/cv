@@ -73,7 +73,7 @@ header.header {
 }
 
 header.header p {
-    margin-bottom: 0;
+    margin-bottom: -0.2em;
 }
 
 header.header div {
@@ -93,7 +93,7 @@ header div:last-child {
 header h1 {
     font-size: 46px;
     margin: 0;
-    margin-bottom: -0.1em;
+    margin-bottom: -0.15em;
 }
 
 header h2 {
@@ -116,7 +116,14 @@ dl {
     display: grid;
     grid-template-columns: 40% 60%;
     font-style: normal;
-    margin: 0 0 1em;
+    margin: 0 0 0.5em;
+}
+
+address,
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 dl:last-child {
@@ -133,8 +140,8 @@ nav dt {
 }
 
 dt svg {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
 }
 
 dd {
@@ -145,11 +152,11 @@ dd {
 section > h1 {
     text-transform: uppercase;
     margin-top: 0;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.4em;
 }
 
 .job {
-    margin: 0 0 2em;
+    margin: 0 0 1.5em;
 }
 
 .job header {
