@@ -99,10 +99,10 @@
                             Mérce is an independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself. Some of the tools include:
                         </p>
                         <ul>
-                            <li>Everything-as-code principle on <strong>Roots.io</strong> stack: Trellis, Bedrock, Sage</li>
-                            <li>Frontend: <strong>HTML, CSS / Sass, JavaScript / jQuery, Node.js, gulp, D3 / C3</strong></li>
-                            <li>Backend: <strong>PHP / Composer / WordPress, MySQL, Nginx, FastCGI Cache</strong></li>
-                            <li>Operations: <strong>Linux, AWS S3 & CloudFlare</strong>, Provisioned & Deployed with <strong>Ansible</strong></li>
+                            <li>Everything-as-code principle on <strong>Roots.io</strong> stack: Trellis, Bedrock, Sage.</li>
+                            <li>Frontend: <strong>HTML, CSS / Sass, JavaScript / jQuery, REST APIs, Node.js, gulp, D3 / C3</strong>.</li>
+                            <li>Backend: <strong>PHP / Composer / WordPress, MySQL, Nginx, FastCGI Cache</strong>.</li>
+                            <li>Operations: <strong>Linux, AWS S3 & CloudFlare</strong>, Provisioned & Deployed with <strong>Ansible</strong>.</li>
                         </ul>
                     "
                 >
@@ -141,6 +141,24 @@
                             <li>Frontend: Vue.js frontend built and packaged with Node.js / Webpack / Babel.</li>
                             <li>Backend: Doctrine ORM, Laminas Framework (née Zend).</li>
                             <li>Operations: full integration with the core sites's Ansible deployment, served as a WordPress plugin.</li>
+                        </ul>
+                    "
+                >
+                </job-item>
+                <job-item
+                    dateFrom="2010-11"
+                    dateTo="2014-05"
+                    position="Developer"
+                    employer="HomeExchange"
+                    category="Travel"
+                    description = "
+                        <p>
+                            HomeExchange was and is the world leader in exchange vacations. While working in a geographically distributed team my tasks included:
+                        </p>
+                        <ul>
+                            <li>Transition the site's GIS systtem to Google Maps API, new implementation for internal mapping APIs & databases.</li>
+                            <li>Key role in a total frontend redesign.</li>
+                            <li>Developing interfaces for interal tooling (e.g. Customer Service).</li>
                         </ul>
                     "
                 >
@@ -197,7 +215,7 @@
                 _employer() {
                     let content = '';
                     content += this.employer;
-                    if (this.employerLink != '') {
+                    if (typeof this.employerLink != 'undefined') {
                         content += ` – <a href="${this.employerLink}">${this.employerLink}</a>`;
                     }
                     let fragment = document.createRange().createContextualFragment(content);
