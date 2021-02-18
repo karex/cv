@@ -258,12 +258,22 @@
                     let years = Math.floor(diff / 12);
                     let months = diff % 12;
                     let yearStr = 'yr';
+                    
+                    if (years === 1 && months === 0) {
+                        years = 0;
+                        months = 12;
+                    }
+                    
                     if (years > 1) {
                         yearStr = 'yrs';
                     }
                     let monthStr = 'mo';
                     if (months > 1) {
                         monthStr = 'mos';
+                    }
+                    
+                    if (years === 0) {
+                        return `${months} ${monthStr}`;
                     }
                     
                     return `${years} ${yearStr} ${months} ${monthStr}`;
