@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./styles/theme.css" />
     </head>
     <body>
-        <header>
+        <header class="header">
             <div>
                 <h1>Károly Füzessi</h1>
                 <hr>
@@ -88,6 +88,7 @@
             <section>
                 <h1>Work Experience</h1>
                 <job-item
+                    class="job-item"
                     dateFrom="2016-07"
                     dateTo="2021-01"
                     position="Head of Technology & Lead Developer"
@@ -96,7 +97,7 @@
                     category="Media"
                     description = "
                         <p>
-                            Mérce is an independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself. Some of the tools include:
+                            Mérce is an independent news website with 1M+ vists a month. I've <strong>developed the frontend & the backend</strong> from the ground up and was responsible for <strong>operations</strong> by myself. Some details about the technologies used:
                         </p>
                         <ul>
                             <li>Everything-as-code principle on <strong>Roots.io</strong> stack: Trellis, Bedrock, Sage.</li>
@@ -108,6 +109,7 @@
                 >
                 </job-item>
                 <job-item
+                    class="job-item"
                     dateFrom="2015-06"
                     dateTo="2021-01"
                     position="IT Consultant & Web Developer"
@@ -119,33 +121,34 @@
                             Milestone Institute is one of the leading national centres of advanced education in Hungary. I've planned, developed & maintained their web presence. Notable functions:
                         </p>
                         <ul>
-                            <li>Accessible & searchable presentation of complex datastructures.</li>
-                            <li>Easy addition of vast amounts of data with custom CSV importers.</li>
-                            <li>Interactive online events, extensive event handling, mapping.</li>
+                            <li><strong>Accessible & searchable presentation</strong> of complex data structures.</li>
+                            <li>Easy addition of vast amounts of data with custom <strong>CSV importers</strong>.</li>
+                            <li><strong>Interactive online events</strong>, extensive <strong>event handling</strong>, <strong>mapping</strong>.</li>
                         </ul>
                     "
                 >
                 </job-item>
                 <job-item
+                    class="job-item"
                     dateFrom="2019-01"
                     dateTo="2019-12"
                     position="Tech Lead"
-                    employer="Mérce Platform / European Journalism Accelerator Grantee"
-                    employerLink="https://merce.hu"
+                    employer="European Journalism Accelerator Grantee / Mérce Platform"
                     category="Media"
                     description = "
                         <p>
                             I've lead a lean team to deliver a modularized system for the editorial board to manage the assignments & to follow the life path of articles, integrated with calendars for events and anniversaries. Some of the technolgies used:
                         </p>
                         <ul>
-                            <li>Frontend: Vue.js frontend built and packaged with Node.js / Webpack / Babel.</li>
-                            <li>Backend: Doctrine ORM, Laminas Framework (née Zend).</li>
-                            <li>Operations: full integration with the core sites's Ansible deployment, served as a WordPress plugin.</li>
+                            <li>Frontend: <strong>Vue.js</strong> frontend built and packaged with <strong>Node.js / Webpack / Babel</strong>.</li>
+                            <li>Backend: <strong>Doctrine ORM, Laminas Framework (née Zend)</strong>.</li>
+                            <li>Operations: full integration with the core sites's <strong>Ansible</strong> deployment, served as a <strong>WordPress plugin</strong>.</li>
                         </ul>
                     "
                 >
                 </job-item>
                 <job-item
+                    class="job-item"
                     dateFrom="2010-11"
                     dateTo="2014-05"
                     position="Developer"
@@ -156,14 +159,15 @@
                             HomeExchange was and is the world leader in exchange vacations. While working in a geographically distributed team my tasks included:
                         </p>
                         <ul>
-                            <li>Transition the site's GIS systtem to Google Maps API, new implementation for internal mapping APIs & databases.</li>
-                            <li>Key role in a total frontend redesign.</li>
-                            <li>Developing interfaces for interal tooling (e.g. Customer Service).</li>
+                            <li>Transition the <strong>GIS system</strong> to <strong>Google Maps API</strong>.</li>
+                            <li>Key role in a total <strong>frontend redesign</strong>.</li>
+                            <li><strong>Developing interfaces</strong> for interal tooling (e.g. Customer Service).</li>
                         </ul>
                     "
                 >
                 </job-item>
                 <job-item
+                    class="job-item"
                     dateFrom="2007-12"
                     dateTo="2010-10"
                     position="Project Designer & Developer"
@@ -174,15 +178,25 @@
                             We've designed and developed a central portal for all Hungarian libraries and their readers. Some of the features we've developed include:
                         </p>
                         <ul>
-                            <li>Customized user experience based on location and interests.</li>
-                            <li>User-editable database of all Hungarian Libraries.</li>
-                            <li>Real-time search in many different library catalogues at once.</li>
-                            <li>Snap-in module for external library catalogues connecting to our database.</li>
+                            <li><strong>Customized user experience</strong> based on location and interests.</li>
+                            <li><strong>User-editable database</strong> of all Hungarian Libraries.</li>
+                            <li><strong>Real-time search</strong> in many different library catalogues at once.</li>
+                            <li><strong>Snap-in module</strong> for external library catalogues connecting to our database.</li>
                             <li>Virtual bookshelves, wiki, library news & events.</li>
                         </ul>
                     "
                 >
                 </job-item>
+            </section>
+            <section>
+                <h1>Other Works</h1>
+                <p>Being a freelance <strong>web developer since 2001</strong> I've designed, engineered and maintained complete web projects, such as webshops, music festival sites,
+                real estate agency sites, merchandize & portfolio sites, and I've worked on many NGOs web presence as well. I did <strong>frontend & backend development, integrations</strong> with external
+                services & APIs like mapping & social networks.</p>
+                <p>As a developer I pride myself on writing <strong>standars compliant clean code</strong>, and I enjoy learning about the latest technologies just as much as doing the work that makes products <strong>accessible, fast, sustainable and beautiful</strong>.</p>
+                <p>I've worked with many PHP systems like <strong>WordPress, WooCommerce, CiviCRM, OpenCart, Joomla!</strong> and
+                custom built CMSs, as well as lower level <strong>MVC frameworks</strong>. I've used frontend frameworks such as <strong>Vue.js</strong> and worked extensively with <strong>SVG</strong>.</p>
+                <p>I've actually made <strong>this CV with HTML, CSS, JS, Web Components</strong> (LitElement) and a Node.js-powered toolset to render the PDF with headless Chrome. The source code is available on GitHub (<a href="https://github.com/karex/cv">https://github.com/karex/cv</a>).</p>
             </section>
         </main>
         
@@ -214,17 +228,17 @@
                 render() {
                     return html`
                         <article class="job">
-                            <div>
-                                <time class="dates">${this.dateFrom} &rarr; ${this.dateTo}</time>
-                                <time class="duration">${this._duration()}</slot></time>
-                            </div>
-                            <h1 class="position">
-                                ${this.position}
-                            </h1>
-                            <div>
-                                <span class="employer">${this._employer()}</span>
-                                <span class="category">(${this.category})</span>
-                            </div>
+                            <header>
+                                <div>
+                                    <time class="dates">${this.dateFrom} &rarr; ${this.dateTo}</time>
+                                    <time class="duration">${this._duration()}</slot></time>
+                                    –                                <span class="employer">${this._employer()}</span>
+                                    <span class="category">(${this.category})</span>
+                                </div>
+                                <h1 class="position">
+                                    ${this.position}
+                                </h1>
+                            </header>
                             <div class="description">
                                 ${this._description()}
                             </div>
