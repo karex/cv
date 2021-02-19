@@ -190,7 +190,7 @@ section > h1 {
 }
 
 .job .description {
-    margin-left: calc(1em + 6px);
+    margin-left: calc(1em + var(--single-width));
 }
 
 #education h2 {
