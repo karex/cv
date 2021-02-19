@@ -11,12 +11,13 @@
     --background: #fff;
     --theme-color: lightskyblue;
     --single-width: 3px;
+    --base-font-size: 15px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--dark);
-    font-size: 15px;
+    font-size: var(--base-font-size);
     margin: 0;
     line-height: 1.35;
 }
@@ -195,4 +196,9 @@ section > h1 {
 #education h2 {
     font-size: 20px;
     margin: 0;
+}
+
+.and {
+    font-weight: normal;
+    font-size: var(--base-font-size);
 }
