@@ -55,11 +55,15 @@ ul li::marker {
     color: var(--theme-color);
 }
 
+section:not(.work) {
+    page-break-inside: avoid;
+}
+
 main section {
-    padding-top: 1em;
+    padding-top: 0.9em;
     padding-bottom: 1em;
     width: auto;
-    border-bottom: var(--single-width) solid var(--theme-color);
+    border-top: var(--single-width) solid var(--theme-color);
 }
 
 main section:last-child {
@@ -69,7 +73,6 @@ main section:last-child {
 header.header {
     display: flex;
     justify-content: space-between;
-    border-bottom: var(--single-width) solid var(--theme-color);
     padding: 0 0 1em;
 }
 
