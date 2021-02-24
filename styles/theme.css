@@ -156,6 +156,27 @@ section > h1 {
     margin-bottom: 0.4em;
 }
 
+.skills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillset {
+    padding-right: 1em;
+}
+
+.skillset h2 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+
+.skillset i {
+    font-style: normal;
+    color: var(--theme-color);
+    font-weight: bold;
+}
+
 .job {
     margin: 0 0 1.5em;
 }
