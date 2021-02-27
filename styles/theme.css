@@ -36,8 +36,9 @@ hr {
 
 a {
     color: var(--dark);
-    text-decoration: none;
-    border-bottom: 0.5px solid var(--theme-color);
+    text-decoration-color: var(--theme-color);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
 }
 
 p,
@@ -55,15 +56,15 @@ ul li::marker {
     color: var(--theme-color);
 }
 
-section:not(.work) {
-    page-break-inside: avoid;
-}
-
 main section {
     padding-top: 0.9em;
     padding-bottom: 1em;
     width: auto;
     border-top: var(--single-width) solid var(--theme-color);
+}
+
+section:not(.work) {
+    page-break-inside: avoid;
 }
 
 main section:last-child {
@@ -187,6 +188,7 @@ section > h1 {
 .job header {
     border-left: var(--single-width) solid var(--theme-color);
     padding-left: 1em;
+    page-break-inside: avoid;
 }
 
 .job-item:last-child .job {
